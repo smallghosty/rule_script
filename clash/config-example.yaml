@@ -1,0 +1,174 @@
+# Clash 完整配置示例
+# Clash Complete Configuration Example
+# 更新时间: 2026-02-17
+
+# 混合端口 HTTP和SOCKS5用一个端口
+mixed-port: 7890
+
+# 允许局域网的连接
+allow-lan: true
+
+# Clash 的 RESTful API
+external-controller: '127.0.0.1:9090'
+
+# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）
+mode: rule
+
+# 日志级别：silent / error / warning / info / debug
+log-level: info
+
+# DNS 配置
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 114.114.114.114
+  fallback:
+    - 8.8.8.8
+    - 1.1.1.1
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+# 代理服务器配置（示例）
+proxies:
+  # 请替换为您的实际代理服务器配置
+  - name: "节点1"
+    type: ss
+    server: server1.example.com
+    port: 443
+    cipher: aes-256-gcm
+    password: "your-password"
+    udp: true
+
+  - name: "节点2"
+    type: vmess
+    server: server2.example.com
+    port: 443
+    uuid: 00000000-0000-0000-0000-000000000000
+    alterId: 0
+    cipher: auto
+    udp: true
+
+# 策略组
+proxy-groups:
+  # 主要策略组
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "自动选择"
+      - "手动选择"
+      - DIRECT
+
+  # 自动选择最低延迟
+  - name: "自动选择"
+    type: url-test
+    proxies:
+      - "节点1"
+      - "节点2"
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  # 手动选择节点
+  - name: "手动选择"
+    type: select
+    proxies:
+      - "节点1"
+      - "节点2"
+
+  # Emby 专用策略组
+  - name: "Emby"
+    type: select
+    proxies:
+      - "手动选择"
+      - "自动选择"
+      - "节点1"
+      - "节点2"
+      - DIRECT
+
+  # 流媒体策略组
+  - name: "流媒体"
+    type: select
+    proxies:
+      - "手动选择"
+      - "自动选择"
+      - "节点1"
+      - "节点2"
+
+  # 漏网之鱼
+  - name: "Final"
+    type: select
+    proxies:
+      - "PROXY"
+      - DIRECT
+
+# 规则配置
+rules:
+  # 广告拦截规则
+  - DOMAIN-SUFFIX,ad.doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleads.g.doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,pagead2.googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,adservice.google.com,REJECT
+  - DOMAIN-SUFFIX,ads.95516.com,REJECT
+  - DOMAIN-SUFFIX,acs.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,ad.m.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,mi.gdt.qq.com,REJECT
+  - DOMAIN-SUFFIX,cbjs.baidu.com,REJECT
+  - DOMAIN-SUFFIX,cpro.baidu.com,REJECT
+  - DOMAIN-SUFFIX,pangolin.snssdk.com,REJECT
+  - DOMAIN-SUFFIX,ad.toutiao.com,REJECT
+  
+  # Emby 分流规则
+  - DOMAIN-SUFFIX,emby.media,Emby
+  - DOMAIN-SUFFIX,embyserver.media,Emby
+  - DOMAIN-SUFFIX,mb3admin.com,Emby
+  
+  # 流媒体规则
+  - DOMAIN-SUFFIX,netflix.com,流媒体
+  - DOMAIN-SUFFIX,nflxext.com,流媒体
+  - DOMAIN-SUFFIX,nflximg.com,流媒体
+  - DOMAIN-SUFFIX,disneyplus.com,流媒体
+  
+  # 直连规则
+  - DOMAIN-SUFFIX,gov.cn,DIRECT
+  - DOMAIN-SUFFIX,edu.cn,DIRECT
+  - DOMAIN-SUFFIX,alipay.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  
+  # 代理规则
+  - DOMAIN-SUFFIX,google.com,PROXY
+  - DOMAIN-SUFFIX,youtube.com,PROXY
+  - DOMAIN-SUFFIX,facebook.com,PROXY
+  - DOMAIN-SUFFIX,twitter.com,PROXY
+  - DOMAIN-SUFFIX,telegram.org,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - DOMAIN-SUFFIX,instagram.com,PROXY
+  
+  # 局域网直连
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  
+  # 中国大陆 IP 直连
+  - GEOIP,CN,DIRECT
+  
+  # 其他所有请求
+  - MATCH,Final

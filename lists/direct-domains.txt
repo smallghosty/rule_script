@@ -1,0 +1,93 @@
+# 国内直连域名列表
+# China Direct Domain List
+# 更新时间: 2026-02-17
+
+# 中国政府网站
+gov.cn
+edu.cn
+mil.cn
+
+# 银行
+95516.com
+95599.cn
+95588.com
+boc.cn
+ccb.com
+icbc.com.cn
+abchina.com
+bankcomm.com
+
+# 支付平台
+alipay.com
+alipayobjects.com
+wechat.com
+weixin.qq.com
+tenpay.com
+
+# 电商平台
+taobao.com
+tmall.com
+jd.com
+pinduoduo.com
+suning.com
+vip.com
+
+# 中国常用服务
+qq.com
+qpic.cn
+gtimg.com
+qlogo.cn
+baidu.com
+bdstatic.com
+360.cn
+sogou.com
+so.com
+douban.com
+doubanio.com
+weibo.com
+zhihu.com
+bilibili.com
+iqiyi.com
+youku.com
+acfun.cn
+
+# 阿里系
+alibaba.com
+alicdn.com
+aliapp.org
+aliyun.com
+alikunlun.com
+yunos.com
+
+# 腾讯系
+myapp.com
+myqcloud.com
+gtimg.cn
+qq.com.cn
+qqmail.com
+qzone.com
+
+# 百度系
+baidu.cn
+baidupcs.com
+baidubce.com
+bdimg.com
+bcebos.com
+
+# 网易系
+163.com
+126.com
+netease.com
+ydstatic.com
+
+# 游戏平台
+steam.rixcloud.io
+steamcontent.com
+dl.steam.ksyna.com
+
+# 字节跳动
+toutiao.com
+snssdk.com
+amemv.com
+pstatp.com
+toutiaoapi.com

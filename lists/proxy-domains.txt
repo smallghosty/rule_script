@@ -1,0 +1,93 @@
+# 代理域名列表
+# Proxy Domain List
+# 更新时间: 2026-02-17
+
+# Google服务
+google.com
+googleapis.com
+googleusercontent.com
+gstatic.com
+gmail.com
+youtube.com
+ytimg.com
+ggpht.com
+googlevideo.com
+
+# Facebook
+facebook.com
+fbcdn.net
+fb.com
+instagram.com
+cdninstagram.com
+whatsapp.com
+whatsapp.net
+
+# Twitter
+twitter.com
+twimg.com
+t.co
+
+# Telegram
+telegram.org
+t.me
+tdesktop.com
+telesco.pe
+telegra.ph
+
+# Apple国际服务
+apple.com
+icloud.com
+mzstatic.com
+appsto.re
+
+# Microsoft
+microsoft.com
+microsoftonline.com
+office.com
+office365.com
+live.com
+visualstudio.com
+windows.net
+
+# GitHub
+github.com
+githubusercontent.com
+github.io
+githubassets.com
+
+# Netflix
+netflix.com
+nflxext.com
+nflximg.com
+nflxso.net
+nflxvideo.net
+
+# Disney+
+disney.com
+disneyplus.com
+dssott.com
+
+# 学术资源
+scholar.google.com
+researchgate.net
+ieee.org
+acm.org
+springer.com
+sciencedirect.com
+jstor.org
+
+# 开发工具
+stackoverflow.com
+stackexchange.com
+medium.com
+reddit.com
+cloudflare.com
+
+# 其他常见国际服务
+dropbox.com
+twitch.tv
+vimeo.com
+pinterest.com
+tumblr.com
+flickr.com
+imgur.com
