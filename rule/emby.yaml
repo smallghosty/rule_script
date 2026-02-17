@@ -1,1 +1,24 @@
+# NAME: Emby
+# AUTHOR: justdoiting
+# REPO: https://github.com/justdoiting/emby-rules
+# UPDATED: 2025-06-06 09:18:50
+# DOMAIN: 3
+# DOMAIN-KEYWORD: 3
+# DOMAIN-SUFFIX: 45
+# PROCESS-NAME: 1
+# TOTAL: 52
+payload:
+  - DOMAIN,m.mobaiemby.site  # 墨云阁
+  - DOMAIN,emby.my   # 月饼
+  - DOMAIN,embymv.link   # peach
+  - DOMAIN,public.shrekmedia.org   # shrek
+  - DOMAIN,mi.miraiemby.com   # mirai
+  - DOMAIN,emby.dnscf.dpdns.org   # HG
+  - DOMAIN,emby.heisi.org   # 游骑兵
+  - DOMAIN,www.lilyemby.com   # lily
+  - DOMAIN,emby.sakiko.de   # 猫猫
+  - DOMAIN-SUFFIX,cn2gias.uk   # 守候
+  - DOMAIN-KEYWORD,lyezi   # 叶子 
+
+
 
