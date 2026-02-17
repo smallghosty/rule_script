@@ -1,0 +1,76 @@
+# 广告域名列表
+# Ad Domain List
+# 更新时间: 2026-02-17
+
+# 常见广告联盟
+ad.doubleclick.net
+googleads.g.doubleclick.net
+pagead2.googlesyndication.com
+adservice.google.com
+www.googleadservices.com
+afs.googlesyndication.com
+
+# 国内广告服务
+ads.95516.com
+acs.m.taobao.com
+adash.m.taobao.com
+adashx.m.taobao.com
+adm.10jqka.com.cn
+ad.m.iqiyi.com
+afp.qiyi.com
+c.e.qq.com
+d.g.qq.com
+mi.gdt.qq.com
+sdk.e.qq.com
+v.gdt.qq.com
+win.gdt.qq.com
+
+# 百度广告
+cbjs.baidu.com
+cpro.baidu.com
+pos.baidu.com
+baidustatic.com
+nsclick.baidu.com
+
+# 阿里广告
+tunion.m.taobao.com
+simba.m.taobao.com
+acs4baichuan.m.taobao.com
+
+# 字节跳动广告
+pangolin.snssdk.com
+toblog.ctobsnssdk.com
+pglstatp-toutiao.com
+ad.toutiao.com
+
+# 腾讯广告
+adsmind.gdtimg.com
+pgdt.gtimg.cn
+pgdt.ugdtimg.com
+
+# 爱奇艺广告
+mixer.cupid.iqiyi.com
+data.video.qiyi.com
+paopao.iqiyi.com
+
+# 优酷广告
+atm.youku.com
+lstat.youku.com
+stat.youku.com
+
+# 视频广告
+yes1.feng.com
+smartvideo.youku.com
+gma.alicdn.com
+
+# 应用内广告
+api.ad.xiaomi.com
+data.mistat.xiaomi.com
+tracking.miui.com
+
+# 其他常见广告
+stat.m.jd.com
+img-x.jd.com
+union.youdao.com
+impservice.dictapp.youdao.com
+impservice.youdao.com

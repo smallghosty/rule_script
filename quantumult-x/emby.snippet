@@ -1,0 +1,26 @@
+# Quantumult X Emby 分流规则
+# Quantumult X Emby Routing Rules
+# 更新时间: 2026-02-17
+# 使用方法: 将本规则添加到 Quantumult X 配置文件的 [filter_local] 或 [filter_remote] 部分
+# 注意: 需要在策略组中创建名为 Emby 的策略组，或者将 Emby 替换为你的节点名称
+
+# Emby官方域名
+HOST-SUFFIX,emby.media,Emby
+HOST-SUFFIX,embyserver.media,Emby
+HOST-SUFFIX,mb3admin.com,Emby
+
+# Emby API相关
+HOST-SUFFIX,api.emby.media,Emby
+HOST-SUFFIX,tv.emby.media,Emby
+HOST-SUFFIX,app.emby.media,Emby
+
+# Emby CDN
+HOST-SUFFIX,images.emby.media,Emby
+HOST-SUFFIX,assets.emby.media,Emby
+
+# 常见公益Emby服务器域名（示例）
+# 请根据实际使用的服务器添加
+# HOST-SUFFIX,emby.example.com,Emby
+# HOST-SUFFIX,media.example.org,Emby
+# HOST-SUFFIX,stream.example.net,Emby
+# HOST,your-emby-server.com,Emby

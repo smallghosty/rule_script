@@ -1,0 +1,26 @@
+# Clash Emby 分流规则
+# Clash Emby Routing Rules
+# 更新时间: 2026-02-17
+# 使用方法: 将本规则添加到 Clash 配置文件的 rules 部分
+# 注意: 需要在策略组中创建名为 Emby 的策略组，或者将 Emby 替换为你的节点名称
+
+# Emby官方域名
+DOMAIN-SUFFIX,emby.media,Emby
+DOMAIN-SUFFIX,embyserver.media,Emby
+DOMAIN-SUFFIX,mb3admin.com,Emby
+
+# Emby API相关
+DOMAIN-SUFFIX,api.emby.media,Emby
+DOMAIN-SUFFIX,tv.emby.media,Emby
+DOMAIN-SUFFIX,app.emby.media,Emby
+
+# Emby CDN
+DOMAIN-SUFFIX,images.emby.media,Emby
+DOMAIN-SUFFIX,assets.emby.media,Emby
+
+# 常见公益Emby服务器域名（示例）
+# 请根据实际使用的服务器添加
+# DOMAIN-SUFFIX,emby.example.com,Emby
+# DOMAIN-SUFFIX,media.example.org,Emby
+# DOMAIN-SUFFIX,stream.example.net,Emby
+# DOMAIN,your-emby-server.com,Emby

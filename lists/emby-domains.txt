@@ -1,0 +1,23 @@
+# Emby服务器域名列表
+# Emby Server Domain List
+# 更新时间: 2026-02-17
+
+# Emby官方域名
+emby.media
+embyserver.media
+mb3admin.com
+
+# 常见公益Emby服务器域名（示例）
+# 请根据实际使用的服务器添加
+# emby.example.com
+# media.example.org
+# stream.example.net
+
+# Emby API相关
+api.emby.media
+tv.emby.media
+app.emby.media
+
+# Emby CDN
+images.emby.media
+assets.emby.media
